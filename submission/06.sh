@@ -1,1 +1,2 @@
 # Only one tx in block 243,821 signals opt-in RBF. What is its txid?
+bitcoin-cli -signet decoderawtransaction $(bitcoin-cli -signet getrawtransaction $(bitcoin-cli -signet getblock $(bitcoin-cli -signet getblockhash 243821) | jq -r '.tx[1]')) | jq -r '.txid'
