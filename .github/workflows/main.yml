@@ -19,7 +19,7 @@ jobs:
 
       - name: Get latest block in signet mode
         run: |
-            bitcoin-cli getblockhash 243833
+            bitcoin-cli -signet getblockhash 243833
 
       - name: 01.sh - Verify Hash Block
         run: |
